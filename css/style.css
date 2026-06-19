@@ -1,0 +1,400 @@
+/* geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0a1f0a;
+    color:#f0f0f0;
+}
+
+/* navbar */
+nav{
+    background-color: #000;
+    border-bottom: 3px solid #d4a017;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.nav-logo img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.nav-logo span {
+    color: #d4a017;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 6px;
+
+}
+
+nav ul a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+nav ul a:hover, nav ul a.ativa {
+    background-color: #d4a017;
+    color: #000;
+}
+
+
+
+/* inicio */
+.copa {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.copa img.copa-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.55);
+    transform: scale(1.02);
+}
+
+.copa-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.55) 60%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+}
+
+.copa-texto {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 32px 28px;
+    max-width: 760px;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.32);
+    border: 1px solid rgba(212, 160, 23, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+.copa-texto h1{
+    color: #f4d15b;
+    font-size: clamp(2.4rem, 3.2vw, 3.4rem);
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
+}
+
+.copa-texto p {
+    color: #ebebeb;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* main */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding:40px 24px 60px;
+}
+
+section{
+    margin-bottom:48px;
+}
+
+section h2{
+    font-size: 1.5rem;
+    color: #d4a017;
+    margin-bottom: 16px;
+    border-left: 4px solid #d4a017;
+    padding-left: 12px;
+}
+
+section p{
+    color: #bbb;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* imagem com legenda */
+.imagem-bloco {
+    margin: 20px 0;
+}
+
+.imagem-bloco img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 1px solid #1a3f1a;
+}
+
+.imagem-bloco figcaption{
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 6px;
+    text-align: center;
+}
+
+/* imagem com texto do lado  */
+
+.bloco-lateral{
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.bloco-lateral img{
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 1px solid #1a2f1a;
+}
+
+.bloco-lateral .texto p{
+    margin-bottom: 8px;
+}
+
+/* cards */
+.cards {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+
+}
+
+.card {
+    background-color: #112d11;
+    border: 1px solid #1a3f1a;
+    border-radius: 6px;
+    overflow: hidden;
+    flex: 1 1 220px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-corpo {
+    padding: 16px;
+}
+
+.card-corpo h3 {
+    color: #d4a017;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.card-corpo p {
+    color: #aaa;
+    margin: 0;
+    font-size: 0.88rem;
+}
+
+/* botão */
+.botao {
+    display: inline-block;
+    background-color: #d4a017;
+    color: #000;
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 12px;
+
+}
+
+.botao:hover {
+    background-color: #f0c040;
+}
+
+/* tabelas  */
+.tabela-wrap{
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top:12px;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #1a3f1a;
+    color: #d4a017;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 2px solid #d4a017;
+
+
+}
+
+td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #1a3f1a;
+    color: #ddd;
+}
+
+tr:hover td {
+    background-color: #112d11;
+}
+
+/* podio */
+.podio {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.podio-item {
+    background-color: #112d11;
+    border: 1px solid #1a3f1a;
+    border-radius: 6px 6px 0 0;
+    text-align: center;
+    padding: 20px 16px 16px;
+    flex: 1;
+    max-width: 200px;
+}
+
+.podio-item.primeiro{
+    border-color: #d4a017;
+    background-color: #1a3000;
+    padding-top: 36px;
+}
+
+.podio-item.segundo{
+    padding-top: 28px;
+}
+
+.podio-item .posicao{
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.podio-item .jogador-foto{
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1a3f1a;
+    margin-bottom: 10px;
+}
+
+.podio-item.primeiro .jogador-foto{
+    border-color: #d4a017;
+    width: 96px;
+    height: 96px;
+}
+
+.podio-item .jogador-nome{
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.podio-item .jogador-selecao{
+    font-size: 0.8rem;
+    color: #aaa;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.podio-item .jogador-gols{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #d4a017;
+    display: block;
+}
+
+.podio-item .jogador-gols pequeno{
+    font-size: 0.7rem;
+    color: #777;
+    font-weight: normal;
+}
+
+/* footer */
+footer {
+    background-color: #000;
+    border-top: 2px solid #1a3f1a;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+footer p {
+    font-size: 0.85ren;
+    color: #555;
+}
+
+/* responsividade */
+@media (max-width: 640px){
+    nav ul a {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+    }
+
+    .copa {
+        min-height: 420px;
+    }
+
+    .copa-texto h1 {
+        font-size: 2rem;
+    }
+
+    .copa-texto {
+        padding: 24px 18px;
+    }
+
+    .bloco-lateral img {
+        width: 100%;
+        height: 100%;
+    }
+
+    main {
+        padding: 24px 16px 40px;
+    }
+}
